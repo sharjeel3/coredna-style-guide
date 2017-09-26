@@ -53,16 +53,14 @@ export default class Demo extends Component {
         );
 
         return (
-          <Text key={i}>
-            <label>
-              <input
-                type="checkbox"
-                checked={checked}
-                onChange={this.makeCheckboxChangeHandler(option, state)}
-              />
-              { state.label }
-            </label>
-          </Text>
+          <label className={styles.label} key={i}>
+            <input
+              type="checkbox"
+              checked={checked}
+              onChange={this.makeCheckboxChangeHandler(option, state)}
+            />
+            { state.label }
+          </label>
         );
       })
     );
@@ -143,7 +141,7 @@ export default class Demo extends Component {
             null
           }
         </PageBlock>
-        <Baseline isVisible={true} type="bar" color="#e8e8e8">
+        <Baseline isVisible={true} type="bar" color="#e8e8e8" lineHeight={6}>
           <div
             className={classnames({
               [styles.component]: true,

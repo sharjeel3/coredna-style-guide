@@ -175,8 +175,8 @@ Please note that this list is not exhaustive, so contributions are encouraged. T
 In order to ensure elements correctly follow the grid, element sizing should always be controlled by the following variables:
 
 ```less
-@grid-row-height
-@grid-gutter-width
+@grid-row
+@grid-gutter
 @grid-column-width
 @grid-container-width
 ```
@@ -193,9 +193,9 @@ When defining heights and vertical padding/margins:
 
 ```less
 .element {
-  height: (@grid-row-height * 3);
-  padding-bottom: @grid-row-height;
-  margin-bottom: @grid-row-height;
+  height: (@grid-row * 3);
+  padding-bottom: @grid-row;
+  margin-bottom: @grid-row;
 }
 ```
 
@@ -204,7 +204,7 @@ When defining widths and horizontal padding/margins:
 ```less
 .element {
   width: (@grid-column-width * 3);
-  padding-right: @grid-gutter-width;
+  padding-right: @grid-gutter;
   margin-right: @grid-column-width;
 }
 ```
@@ -215,7 +215,7 @@ It's important to note that any additions to these values (e.g. borders) will ne
 .element {
   @border-width: 1px;
   border-bottom: @border-width solid @sk-charcoal;
-  padding-bottom: @grid-row-height - @border-width;
+  padding-bottom: @grid-row - @border-width;
 }
 ```
 

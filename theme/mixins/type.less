@@ -52,7 +52,7 @@
   .__responsiveType("small"; @baseline);
 }
 
-@touchableTextHeight: @grid-row-height * @interaction-type-row-span;
+@touchableTextHeight: @grid-row * @interaction-type-row-span;
 
 .touchableText(@font-scale: @interaction-type-scale) {
   .rawText(@font-scale);
@@ -67,11 +67,11 @@
 // Private type mixins
 .__type(@type-scale; @row-span; @baseline) when (isnumber(@type-scale)) and (isnumber(@row-span)) {
   .__baselineCheck(@baseline) when (@baseline = true) {
-    .basekick(@type-scale, @row-span, @font-descender-height-scale, @base-font-size, @grid-row-height);
+    .basekick(@type-scale, @row-span, @font-descender-height-scale, @base-font-size, @grid-row);
   }
   .__baselineCheck(@baseline) when (@baseline = false) {
     .rawText(@type-scale);
-    line-height: (@grid-row-height * @row-span);
+    line-height: (@grid-row * @row-span);
   }
   .__baselineCheck(@baseline);
 }

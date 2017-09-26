@@ -4,7 +4,7 @@ import { PageBlock, AsidedLayout, Card, CardGroup, Section, Paragraph, Text, Tex
 import Demo from '../Demo/Demo';
 
 const BackgroundContainer = ({ component: DemoComponent, componentProps }) => (
-  <div style={{ backgroundColor: '#eeeeee', padding: 0.1 }}>
+  <div style={{ backgroundColor: '#eeeeee', padding: 0.01 }}>
     <DemoComponent {...componentProps} />
   </div>
 );
@@ -17,7 +17,7 @@ const MockContent = ({ text = 'Lorem ipsum' }) => (
   <div
     style={{
       background: 'blue',
-      height: (17 * 9),
+      height: (30 * 6),
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center'

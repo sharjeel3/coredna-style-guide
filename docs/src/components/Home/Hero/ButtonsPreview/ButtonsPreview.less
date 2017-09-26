@@ -10,13 +10,13 @@
   &:not(:last-child) {
     margin-right: 0;
     @media only screen and (min-width: 500px) {
-      margin-right: @grid-gutter-width;
+      margin-right: @grid-gutter;
     }
     @media only screen and (min-width: 640px) {
       margin-right: 0;
     }
     @media only screen and (min-width: 840px) {
-      margin-right: @grid-gutter-width;
+      margin-right: @grid-gutter;
     }
   }
 
@@ -37,11 +37,11 @@
     display: block;
 
     &:not(:last-child) {
-      margin-bottom: @grid-row-height;
+      margin-bottom: (@grid-row * 2);
     }
   }
 }
 
 .button {
-  width: @grid-gutter-width * 5;
+  width: @grid-gutter * 5;
 }

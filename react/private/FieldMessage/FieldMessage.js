@@ -50,6 +50,7 @@ export default class FieldMessage extends Component {
 
       return (
         <Text
+          small
           {...restMessageProps}
           critical={(valid === false && !secondary) || critical}
           positive={(valid === true && !secondary) || positive}
