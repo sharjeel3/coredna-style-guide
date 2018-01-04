@@ -1,5 +1,7 @@
-import React, { Component, PropTypes } from 'react';
-import './StandaloneProvider.less';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+import styles from './StandaloneProvider.less';
 import cssSelectorPrefix from '../../cssSelectorPrefix';
 
 export default class StandaloneProvider extends Component {
@@ -29,7 +31,9 @@ export default class StandaloneProvider extends Component {
 
     return (
       <div className={cssSelectorPrefix.replace('.', '')}>
-        <StandaloneComponent {...componentProps} />
+        <div className={styles.root}>
+          <StandaloneComponent {...componentProps} />
+        </div>
       </div>
     );
   }

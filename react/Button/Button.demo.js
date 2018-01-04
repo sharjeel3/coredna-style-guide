@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, HeartIcon, StarIcon } from 'seek-style-guide/react';
+import * as sketch from './Button.sketch';
 import styles from './Button.less';
 import classnames from 'classnames';
 
@@ -7,6 +8,7 @@ export default {
   route: '/button',
   title: 'Button',
   component: Button,
+  sketch,
   initialProps: {
     children: 'Hello world',
     color: 'pink'
@@ -50,6 +52,13 @@ export default {
             ...props,
             fullWidth: true
           })
+        },
+        {
+          label: 'Ghost',
+          transformProps: props => ({
+            ...props,
+            ghost: true
+          })
         }
       ]
     },
@@ -90,6 +99,13 @@ export default {
           transformProps: props => ({
             ...props,
             color: 'pink'
+          })
+        },
+        {
+          label: 'White',
+          transformProps: props => ({
+            ...props,
+            color: 'white'
           })
         },
         {

@@ -1,0 +1,22 @@
+{
+  "testPathIgnorePatterns": [
+    "<rootDir>[/\\\\](dist|node_modules)[/\\\\]"
+  ],
+  "moduleNameMapper": {
+    "\\.(css|less)$": "identity-obj-proxy"
+  },
+  "transform": {
+    "^.+\\.js$": "<rootDir>/test/babel.transform.js",
+    "^.+\\.svg$": "<rootDir>/test/svg.transform.js"
+  },
+  "transformIgnorePatterns": [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+  ],
+  "snapshotSerializers": [
+    "<rootDir>/node_modules/enzyme-to-json/serializer"
+  ],
+  "setupFiles": [
+    "<rootDir>/test/setupPolyfills.js"
+  ],
+  "setupTestFrameworkScriptFile": "<rootDir>/test/setupTestFramework.js"
+}

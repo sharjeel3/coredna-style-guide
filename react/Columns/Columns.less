@@ -11,6 +11,9 @@
     flex-basis: 0;
     flex-grow: 1;
     padding: 0 (@grid-gutter / 2);
+    .columns_flexible & {
+      min-width: auto;
+    }
     .columns_tight & {
       padding: 0 (@grid-gutter / 4);
     }

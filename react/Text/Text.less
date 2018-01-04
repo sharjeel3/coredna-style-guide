@@ -3,6 +3,12 @@
 .root {
   padding-bottom: @grid-row * 2;
   display: block;
+  &:not(.baseline) {
+    .standardTextResponsive(@baseline: false);
+  }
+  &.baseline {
+    .standardTextResponsive(@baseline: true);
+  }
 
   .root {
     position: relative;
@@ -18,11 +24,6 @@
       padding: 0 @grid-gutter;
     }
   }
-}
-
-.root {
-  &:not(.baseline) { .standardTextResponsive(@baseline: false); }
-  &.baseline { .standardTextResponsive(@baseline: true); }
 }
 
 .small {
