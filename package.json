@@ -1,7 +1,7 @@
 {
-  "name": "seek-style-guide",
+  "name": "coredna-style-guide",
   "version": "0.0.0-development",
-  "description": "Living style guide containing the building blocks and design principles for SEEK web applications",
+  "description": "Living style guide containing the building blocks and design principles for Coredna",
   "engines": {
     "node": ">=6.0.0"
   },
@@ -22,7 +22,7 @@
     "compile-header-footer": "NODE_ENV=production webpack --config standalone/header-footer/webpack.config.js && rm dist/header-footer/render.js",
     "html-sketchapp": "html-sketchapp --config docs/html-sketchapp.config.js",
     "build": "npm run clean && npm run compile",
-    "build-gh-pages": "BASE_HREF=/seek-style-guide/ npm run build",
+    "build-gh-pages": "BASE_HREF=/coredna-style-guide/ npm run build",
     "deploy-gh-pages": "node scripts/deploy-gh-pages.js",
     "deploy-surge": "surge -p ./docs/dist",
     "commit": "git-cz",
@@ -38,14 +38,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/seek-oss/seek-style-guide.git"
+    "url": "https://github.com/sharjeel3/coredna-style-guide.git"
   },
-  "author": "SEEK",
+  "author": "Coredna",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/seek-oss/seek-style-guide/issues"
+    "url": "https://github.com/sharjeel3/coredna-style-guide/issues"
   },
-  "homepage": "https://github.com/seek-oss/seek-style-guide#readme",
+  "homepage": "https://github.com/sharjeel3/coredna-style-guide#readme",
   "dependencies": {
     "basekick": "^3.0.0",
     "classnames": "^2.2.5",
