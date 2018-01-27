@@ -8,7 +8,7 @@ export default () => (
     </Section>
 
     <Section>
-      <Text subheading regular>SEEK have developed 10 principles that describe the fundamental goals the design team consider when applying their minds to new design challenges or refining existing work. Their purpose is to enable the creation of content that will assist our users to complete tasks easily and hopefully enjoy the experience.</Text>
+      <Text subheading regular>Coredna Style Guide is inspired by SEEK Style Guide. The purpose is to enable the creation of content that will assist our partners to complete tasks easily and hopefully enjoy the experience.</Text>
     </Section>
 
     <Columns>
@@ -20,13 +20,13 @@ export default () => (
         </Section>
 
         <Section>
-          <Text strong>A Seek interaction is transparent, honest and trustworthy</Text>
-          <Text>A user experience at Seek should be true to the brand & true to how people want to be treated. “If we want users to like our software, we should design it to behave like a likeable person.” – Alan Cooper</Text>
+          <Text strong>A website interaction is transparent, honest and trustworthy</Text>
+          <Text>A user experience at Coredna should be true to the brand & true to how people want to be treated. “If we want users to like our software, we should design it to behave like a likeable person.” – Alan Cooper</Text>
         </Section>
 
         <Section>
           <Text strong>Use persuasive design to achieve business goals</Text>
-          <Text>It is not enough that our design is usable, it should be used in a way that encourages users towards the goals of SEEK. A registered user action is more valuable than an anonymous one, a searchable profile is more useful than a hidden one.</Text>
+          <Text>It is not enough that our design is usable, it should be used in a way that encourages users towards the goals of Coredna and its partners. A registered user action is more valuable than an anonymous one, a searchable profile is more useful than a hidden one.</Text>
         </Section>
 
         <Section>
@@ -53,14 +53,14 @@ export default () => (
 
         <Section>
           <Text strong>Accessible design is good design</Text>
-          <Text>In principle Seek design should be usable on all devices by all of the people in all situations. Design is simple, touch friendly and clear and aims for AA accessibility.</Text>
+          <Text>In principle Coredna design should be usable on all devices by all of the people in all situations. Design is simple, touch friendly and clear and aims for AA accessibility.</Text>
         </Section>
       </div>
 
       <div>
         <Section>
           <Text strong>Make it mine</Text>
-          <Text>The jobseeking experience is highly personal one that takes place over extended periods of time. The experience should align to the way that users conduct their jobseeking, allowing them to continue where they left off.</Text>
+          <Text>The Shopping experience is highly personal one that takes place over extended periods of time. The experience should align to the way that users conduct their shopping online, allowing them to continue where they left off.</Text>
         </Section>
 
         <Section>

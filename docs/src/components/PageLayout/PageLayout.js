@@ -4,7 +4,7 @@ import { PageBlock, AsidedLayout, Card, CardGroup, Section, Paragraph, Text, Tex
 import Demo from '../Demo/Demo';
 
 const BackgroundContainer = ({ component: DemoComponent, componentProps }) => (
-  <div style={{ backgroundColor: '#eeeeee', padding: 0.1 }}>
+  <div style={{ backgroundColor: '#DCDCDC', padding: 0.1 }}>
     <DemoComponent {...componentProps} />
   </div>
 );

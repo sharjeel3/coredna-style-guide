@@ -18,14 +18,16 @@ const demoRoutes = demoSpecs.map(demoSpec => {
 });
 
 export default () => (
-  <StyleGuideProvider fullScreen={true} title="SEEK Style Guide">
-    <Header />
-    <Route path="/" exact component={Home} />
-    <Route path="/typography" component={Typography} />
-    <Route path="/page-layout" component={PageLayout} />
-    <Route path="/playground" component={Playground} />
-    <Route path="/sketch-exports" component={SketchExports} />
-    { demoRoutes }
-    <Footer />
+  <StyleGuideProvider fullScreen={true} title="Coredna Style Guide">
+      <div style={{backgroundColor: "#DCDCDC"}}>
+          <Header />
+          <Route path="/" exact component={Home} />
+          <Route path="/typography" component={Typography} />
+          <Route path="/page-layout" component={PageLayout} />
+          <Route path="/playground" component={Playground} />
+          <Route path="/sketch-exports" component={SketchExports} />
+          { demoRoutes }
+          <Footer />
+      </div>
   </StyleGuideProvider>
 );
