@@ -84,6 +84,31 @@ const config = decorateClientConfig({
         ]
       },
       {
+          test: /\.scss$/,
+          include: appPaths,
+          use: [
+              {
+                  loader: 'style-loader'
+              },
+              {
+                  loader: 'css-loader',
+                  options: {
+                      modules: true,
+                      localIdentName: '[name]__[local]___[hash:base64:5]'
+                  }
+              },
+              {
+                  loader: 'postcss-loader',
+                  options: {
+                      plugins: [autoprefixer(autoprefixerConfig)]
+                  }
+              },
+              {
+                  loader: 'sass-loader'
+              }
+          ]
+      },
+      {
         test: /\.svg$/,
         include: appPaths,
         use: [
