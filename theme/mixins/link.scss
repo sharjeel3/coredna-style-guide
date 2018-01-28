@@ -1,0 +1,17 @@
+@mixin link() {
+  color: $sk-link;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+@mixin nav_link() {
+  color: $sk-black;
+  text-decoration: none;
+  &:hover {
+    color: $sk-pink-on-gray-light;
+    cursor: pointer;
+  }
+}

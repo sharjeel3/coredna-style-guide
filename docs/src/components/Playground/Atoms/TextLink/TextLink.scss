@@ -1,0 +1,38 @@
+@import (reference) "~seek-style-guide/theme";
+
+.link {
+  @include link();
+  display: inline-block;
+}
+
+.chevron {
+  margin-left: 4px;
+}
+
+.chevronSvg {
+  height: 14px;
+  width: 14px;
+}
+
+.subheading {
+  @include subheadingTextResponsive();
+  padding-bottom: $grid-row-height;
+}
+
+.heading {
+  @include headingTextResponsive();
+  padding-bottom: $grid-row-height;
+}
+
+.hero {
+  @include heroTextResponsive();
+  padding-bottom: $grid-row-height;
+}
+
+.emphasis {
+  font-weight: $sk-bold;
+}
+
+.touchable {
+  @include touchableText($standard-type-scale);
+}

@@ -1,0 +1,206 @@
+@import (reference) "~seek-style-guide/theme";
+
+@keyframes loading {
+  to { width: $grid-gutter-width; }
+}
+
+@mixin hoverState($rules) {
+  &:hover,
+  &.rootHover {
+    $rules();
+  }
+}
+
+@mixin activeState($rules) {
+  &:active,
+  &.rootActive {
+    $rules();
+  }
+}
+
+@mixin focusState($rules) {
+  &:focus,
+  &.rootFocus {
+    $rules();
+  }
+}
+
+@mixin buttonColor($color, $background-color) {
+  color: $color;
+  background-color: $background-color;
+  .hoverState({
+    background-color: lighten($background-color, 5%);
+  });
+  .activeState({
+    background-color: darken($background-color, 5%);
+  });
+}
+
+@mixin ghostColor($color) {
+
+  @mixin activeBackground() {
+    background-color: lighten($color, 51%);
+  }
+
+  border-color: $color;
+  color: $color;
+
+  .hoverState({
+    background-color: lighten($color, 56%);
+  });
+
+  .activeState({
+    @include activeBackground;
+  });
+
+  .focusState({
+    @include activeBackground;
+  });
+}
+
+.root {
+  @include touchableText();
+  font-weight: $sk-medium;
+  display: inline-block;
+  text-decoration: none;
+  user-select: none;
+  text-align: center;
+  padding: 0 $grid-gutter-width;
+  box-shadow: 0 1px fade($sk-black, 70%);
+  border: 0;
+  border-radius: 2px;
+  transition:
+    background-color 0.2s,
+    transform 0.2s cubic-bezier(0.02, 1.505, 0.745, 1.235);
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  .activeState({
+    box-shadow: none;
+    outline: none;
+    transform: scale(0.95);
+  });
+  .focusState({
+    @include focus();
+  });
+}
+
+.root_isPink {
+  @include buttonColor($sk-white, $sk-pink);
+}
+
+.root_isBlue {
+  @include buttonColor($sk-white, $sk-highlight);
+}
+
+.root_isGray {
+  @include buttonColor($sk-black, $sk-mid-gray-light);
+}
+
+.root_isGhost,
+.root_isTransparent {
+  font-weight: $sk-regular;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.root_isGhost {
+  $border-width: 2px;
+
+  border: $border-width solid;
+  font-weight: $sk-bold;
+  line-height: $touchableTextHeight - ($border-width * 2);
+}
+
+.root_isBlue.root_isGhost {
+  @mixin ghostColor($sk-link)
+}
+
+.root_isWhite.root_isGhost {
+  border-color: $sk-white,
+  color: $sk-white,
+
+  @mixin activeBackground() {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  @mixin activeState({
+    .activeBackground,
+  }),
+
+  .hoverState({
+    .activeBackground,
+  }),
+
+  .focusState({
+    .activeBackground,
+  }),
+}
+
+.root_isTransparent {
+  color: $sk-link,
+  padding-left: 0,
+  padding-right: 0,
+
+  .hoverState({
+    text-decoration: underline,
+  }),
+
+  .activeState({
+    transform: none,
+  }),
+  @media $desktop {
+    .touchableText($standard-type-scale),
+  }
+}
+
+.loading {
+  padding-right: $grid-gutter-width * 2,
+
+  &::after {
+    content: ' \2026',
+    text-align: left,
+    width: 0,
+    overflow-x: hidden,
+    display: inline-block,
+    position: absolute,
+    animation-duration: 0.8s,
+    animation-name: loading,
+    animation-iteration-count: infinite,
+  }
+}
+
+.fullWidth {
+  width: 100%,
+}
+
+.group {
+  width: 100%,
+
+  .root {
+    vertical-align: top,
+    @media only screen and (max-width: 500px) {
+      width: 100%;
+    }
+    &:not(.root_isTransparent) {
+      @media $mobile {
+        padding-left: $grid-gutter-width * 2;
+        padding-right: $grid-gutter-width * 2;
+      }
+    }
+    & + .root {
+      margin-left: $grid-gutter-width / 2;
+      @media only screen and (max-width: 500px) {
+        margin-top: $grid-row-height;
+        margin-left: 0;
+      }
+    }
+    & + .root_isTransparent {
+      margin-left: $grid-gutter-width * 2;
+      @media only screen and (max-width: 500px) {
+        margin-left: 0;
+      }
+    }
+  }
+}

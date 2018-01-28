@@ -1,0 +1,84 @@
+@import (reference) "~seek-style-guide/theme";
+
+@mixin activeFocusReset() {
+  .input:not([readonly]):not([disabled]):focus + .label &,
+  .input:not([readonly]):not([disabled]):active + .label & {
+    outline: none;
+    border-color: transparent;
+    @include focus();
+  }
+}
+
+.root {
+  display: inline-block;
+}
+
+.input {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  display: block;
+
+  :checked + & {
+    font-weight: $sk-bold;
+  }
+}
+
+.standard {
+  @include touchableText($standard-type-scale-mobile);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  @media $desktop {
+    @include touchableText($standard-type-scale);
+  }
+}
+
+.checkBox {
+  @include activeFocusReset();
+
+  background-color: $sk-white;
+  width: $grid-row-height * 3;
+  height: $grid-row-height * 3;
+  border: $field-border-width solid $sk-mid-gray-light;
+  border-radius: $field-border-radius;
+  margin-right: $field-gutter-width;
+  padding: $field-border-radius;
+  fill: $sk-pink;
+}
+
+.checkMark {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: $sk-form-accent;
+  opacity: 0;
+
+  .input:checked + .label & {
+    opacity: 1;
+  }
+}
+
+.button {
+  @include activeFocusReset();
+  @include touchableText($standard-type-scale-mobile);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $sk-gray-light;
+  color: $sk-charcoal;
+  border: 1px solid $sk-mid-gray-light;
+  border-radius: 2px;
+  cursor: pointer;
+  @media $desktop {
+    @include touchableText($standard-type-scale);
+  }
+
+  .input:checked + .label & {
+    font-weight: $sk-bold;
+    background-color: $sk-white;
+    border-bottom: 1px solid $sk-pink;
+  }
+}

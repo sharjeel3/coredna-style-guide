@@ -1,0 +1,8 @@
+// Breakpoint
+$responsive-breakpoint: 740px;
+
+$mobile: "only screen and (max-width: #{($responsive-breakpoint - 1)})";
+
+$desktop: "only screen and (min-width: #{$responsive-breakpoint})";
+
+

@@ -1,0 +1,12 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  display: inline-block;
+  position: relative;
+}
+
+.input {
+  &:last-child {
+    margin-bottom: $grid-row-height * 3;
+  }
+}

@@ -1,0 +1,70 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+  padding-bottom: $grid-row-height;
+  display: block;
+  &:not(.baseline) {
+    @include standardTextResponsive($baseline: false);
+  }
+  &.baseline {
+    @include standardTextResponsive($baseline: true);
+  }
+
+  .root {
+    position: relative;
+    outline: 2px solid red;
+    &::after {
+      content: 'ERROR: Multiple <Text> components nested';
+      background: red;
+      font-weight: $sk-bold;
+      color: white;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0 $grid-gutter-width;
+    }
+  }
+}
+
+.small {
+  &:not(.baseline) { .smallTextResponsive($baseline: false); }
+  &.baseline { .smallTextResponsive($baseline: true); }
+}
+
+.substandard {
+  &:not(.baseline) { .substandardTextResponsive($baseline: false); }
+  &.baseline { .substandardTextResponsive($baseline: true); }
+}
+
+.superstandard {
+  &:not(.baseline) { .superstandardTextResponsive($baseline: false); }
+  &.baseline { .superstandardTextResponsive($baseline: true); }
+}
+
+.subheading {
+  &:not(.baseline) { .subheadingTextResponsive($baseline: false); }
+  &.baseline { .subheadingTextResponsive($baseline: true); }
+}
+
+.headline {
+  &:not(.baseline) { .headlineTextResponsive($baseline: false); }
+  &.baseline { .headlineTextResponsive($baseline: true); }
+}
+
+.heading {
+  &:not(.baseline) { .headingTextResponsive($baseline: false); }
+  &.baseline { .headingTextResponsive($baseline: true); }
+}
+
+.hero {
+  &:not(.baseline) { .heroTextResponsive($baseline: false); }
+  &.baseline { .heroTextResponsive($baseline: true); }
+}
+
+.light {
+  font-weight: $sk-light;
+}
+
+.raw {
+  padding-bottom: 0;
+}

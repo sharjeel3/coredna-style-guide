@@ -1,0 +1,84 @@
+{
+  "name": "seek-style-guide-webpack",
+  "version": "0.0.0-development",
+  "description": "Webpack config decorator to seek-style-guide applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test-build && npm run format-check",
+    "test-build": "NODE_ENV=test webpack --config test/src/webpack.config.js",
+    "format": "prettier --single-quote --write '*.js' 'test/src/**/*.js'",
+    "format-check": "prettier --single-quote --list-different '*.js' 'test/src/**/*.js'",
+    "commit": "git-cz",
+    "commitmsg": "validate-commit-msg",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seek-oss/seek-style-guide-webpack.git"
+  },
+  "author": "SEEK",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seek-oss/seek-style-guide-webpack/issues"
+  },
+  "homepage": "https://github.com/seek-oss/seek-style-guide-webpack#readme",
+  "dependencies": {
+    "autoprefixer": "^7.1.5",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-add-react-displayname": "^0.0.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "browserslist-config-seek": "^1.0.0",
+    "chalk": "^2.1.0",
+    "css-loader": "^0.28.7",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "postcss-loader": "^2.0.7",
+    "postcss-prefix-selector": "^1.6.0",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.19.0",
+    "svgo": "^0.7.2",
+    "svgo-loader": "^1.2.1",
+    "uglify-loader": "^2.0.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "peerDependencies": {
+    "seek-style-guide": ">=26.0.0"
+  },
+  "devDependencies": {
+    "classnames": "^2.2.5",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "lodash.omit": "^4.5.0",
+    "lodash.range": "^3.2.0",
+    "pad-left": "^2.1.0",
+    "prettier": "^1.7.4",
+    "react": "^16.0.0",
+    "react-autosuggest": "^9.3.2",
+    "react-dom": "^16.0.0",
+    "react-helmet": "^5.2.0",
+    "react-isolated-scroll": "^0.1.1",
+    "seek-style-guide": ">=26.0.0",
+    "semantic-release": "^8.0.3",
+    "static-site-generator-webpack-plugin": "^3.4.1",
+    "validate-commit-msg": "^2.14.0",
+    "webpack": "^3.6.0"
+  }
+}

@@ -1,4 +1,4 @@
-import styles from './Columns.less';
+import styles from './Columns.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 

@@ -1,0 +1,111 @@
+@import "../lib/basekick/mixin";
+@import "../type/type";
+@import "../layout/grid";
+
+@function is-string($value) {
+  @return type-of($value) == 'string';
+}
+@function is-number($value) {
+  @return type-of($value) == 'number';
+}
+
+@mixin heroText($baseline: true) {
+  @include __type($hero-type-scale, $hero-type-row-span, $baseline);
+}
+@mixin headlineText($baseline: true) {
+  @include __type($headline-type-scale, $headline-type-row-span, $baseline);
+}
+@mixin headingText($baseline: true) {
+  @include __type($heading-type-scale, $heading-type-row-span, $baseline);
+}
+@mixin subheadingText($baseline: true) {
+  @include __type($subheading-type-scale, $subheading-type-row-span, $baseline);
+}
+@mixin superstandardText($baseline: true) {
+  @include __type($superstandard-type-scale, $superstandard-type-row-span, $baseline);
+}
+@mixin standardText($baseline: true) {
+  @include __type($standard-type-scale, $standard-type-row-span, $baseline);
+}
+@mixin substandardText($baseline: true) {
+  @include __type($substandard-type-scale, $substandard-type-row-span, $baseline);
+}
+@mixin smallText($baseline: true) {
+  @include __type($small-type-scale, $small-type-row-span, $baseline);
+}
+
+@mixin heroTextResponsive($baseline: true) {
+  @include __responsiveType("hero", $baseline);
+}
+@mixin headlineTextResponsive($baseline: true) {
+  @include __responsiveType("headline", $baseline);
+}
+@mixin headingTextResponsive($baseline: true) {
+  @include __responsiveType("heading", $baseline);
+}
+@mixin subheadingTextResponsive($baseline: true) {
+  @include __responsiveType("subheading", $baseline);
+}
+@mixin superstandardTextResponsive($baseline: true) {
+  @include __responsiveType("superstandard", $baseline);
+}
+@mixin standardTextResponsive($baseline: true) {
+  @include __responsiveType("standard", $baseline);
+}
+@mixin substandardTextResponsive($baseline: true) {
+  @include __responsiveType("substandard", $baseline);
+}
+@mixin smallTextResponsive($baseline: true) {
+  @include __responsiveType("small", $baseline);
+}
+
+$touchableTextHeight: $grid-row-height * $interaction-type-row-span;
+
+@mixin touchableText($font-scale: $interaction-type-scale) {
+  @include rawText($font-scale);
+  line-height: $touchableTextHeight;
+  height: $touchableTextHeight;
+}
+
+@mixin rawText($font-scale: $standard-type-scale) {
+  font-size: unitless(($font-scale * $base-font-size), px);
+}
+
+// Private type mixins
+@mixin __type($type-scale, $row-span, $baseline) {
+  @if ((is-number($type-scale)) and (is-number($row-span))) {
+    @mixin __baselineCheck($baseline){
+      @if ($baseline = true){
+        @include basekick($type-scale, $row-span, $font-descender-height-scale, $base-font-size, $grid-row-height);
+      }
+      @else {
+        @include rawText($type-scale);
+        line-height: ($grid-row-height * $row-span);
+      }
+    }
+    @include __baselineCheck($baseline);
+  }
+}
+
+@mixin __responsiveType($variant, $baseline) {
+  @if (is-string($variant)) {
+    // Define responsive text breakpoint limits
+    $max-breakpoint: ($responsive-breakpoint - 1);
+    $min-breakpoint: $responsive-breakpoint;
+    // Concatenate type hierarchy variable name
+    $type-scale: "#{$variant}-type-scale";
+    $row-span: "#{$variant}-type-row-span";
+    $weight: "#{$variant}-type-weight";
+    $mobile-type-scale: "#{$type-scale}-mobile";
+    $mobile-row-span: "#{$row-span}-mobile";
+    $mobile-weight: "#{$variant}-type-weight-mobile";
+    @media only screen and (max-width: $max-breakpoint) {
+      @include __type($mobile-type-scale, $mobile-row-span, $baseline);
+      font-weight: $mobile-weight;
+    }
+    @media only screen and (min-width: $min-breakpoint) {
+      @include __type($type-scale, $row-span, $baseline);
+      font-weight: $weight;
+    }
+  }
+}

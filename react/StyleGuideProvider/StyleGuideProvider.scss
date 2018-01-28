@@ -1,0 +1,20 @@
+@import (reference) "~seek-style-guide/theme";
+
+:global {
+  /* stylelint-disable selector-max-type */
+  @import "./reset";
+
+  html {
+    background-color: $sk-background;
+    min-height: 100%;
+  }
+  /* stylelint-enable selector-max-type */
+}
+
+.root {
+  @include provider();
+}
+
+.fullScreen {
+  height: 100%;
+}
