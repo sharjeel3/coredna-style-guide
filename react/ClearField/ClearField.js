@@ -1,4 +1,4 @@
-import styles from './ClearField.less';
+import styles from './ClearField.scss';
 
 import React from 'react';
 import ClearIcon from '../ClearIcon/ClearIcon';

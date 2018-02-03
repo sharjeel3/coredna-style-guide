@@ -1,4 +1,4 @@
-import styles from './Regular.less';
+import styles from './Regular.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 

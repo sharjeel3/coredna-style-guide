@@ -1,4 +1,4 @@
-import styles from './Logo.less';
+import styles from './Logo.scss';
 import LogoText from './LogoText';
 import LogoIcon from './LogoIcon';
 

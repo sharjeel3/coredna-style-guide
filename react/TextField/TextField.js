@@ -1,4 +1,4 @@
-import styles from './TextField.less';
+import styles from './TextField.scss';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';

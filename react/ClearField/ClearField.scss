@@ -1,5 +1,5 @@
-@import (reference) "~seek-style-guide/theme";
-@import (reference) "ClearFieldVariables";
+@import "~seek-style-guide/theme";
+@import "ClearFieldVariables";
 
 .root {
   height: ($interaction-type-row-span * $grid-row-height);

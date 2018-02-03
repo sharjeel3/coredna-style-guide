@@ -1,4 +1,4 @@
-import styles from './HeartIcon.less';
+import styles from './HeartIcon.scss';
 
 import svgMarkup from './HeartIcon.svg';
 import svgMarkupFilled from './HeartIconFilled.svg';

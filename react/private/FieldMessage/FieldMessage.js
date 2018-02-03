@@ -1,4 +1,4 @@
-import styles from './FieldMessage.less';
+import styles from './FieldMessage.scss';
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';

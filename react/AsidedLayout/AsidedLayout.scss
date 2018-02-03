@@ -1,25 +1,25 @@
-@import (reference) "~seek-style-guide/theme";
+@import "~seek-style-guide/theme";
 
 .root {
-  @media $desktop {
+  @media #{$desktop} {
     display: flex;
   }
 }
 
 .reverse {
-  @media $desktop {
+  @media #{$desktop} {
     flex-direction: row-reverse;
   }
 }
 
 .content {
-  @media $desktop {
+  @media #{$desktop} {
     flex: 1 1;
   }
 }
 
 .aside {
-  @media $desktop {
+  @media #{$desktop} {
     padding-left: $grid-gutter-width;
     flex-grow: 0;
     flex-shrink: 0;

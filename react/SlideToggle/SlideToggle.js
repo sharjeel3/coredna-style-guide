@@ -1,4 +1,4 @@
-import styles from './SlideToggle.less';
+import styles from './SlideToggle.scss';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TickIcon from '../TickIcon/TickIcon';

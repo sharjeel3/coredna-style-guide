@@ -1,14 +1,14 @@
-@import (reference) "~seek-style-guide/theme";
+@import "~seek-style-guide/theme";
 
 @mixin _mobileFill($color) {
-  @media $mobile {
+  @media #{$mobile} {
     fill: $color;
   }
 }
 
 .root {
   background-color: $sk-white;
-  @media $mobile {
+  @media #{$mobile} {
     background-color: $sk-blue;
   }
 }
@@ -19,7 +19,7 @@
 
 .logoText {
   fill: $sk-black;
-  ._mobileFill($sk-white);
+  @include _mobileFill($sk-white);
 }
 
 .invertedLogoText {

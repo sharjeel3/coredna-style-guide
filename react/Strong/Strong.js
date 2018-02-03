@@ -1,4 +1,4 @@
-import styles from './Strong.less';
+import styles from './Strong.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 

@@ -1,4 +1,4 @@
-@import (reference) "~seek-style-guide/theme";
+@import "~seek-style-guide/theme";
 
 .root {
   padding-bottom: $grid-row-height;
@@ -27,38 +27,38 @@
 }
 
 .small {
-  &:not(.baseline) { .smallTextResponsive($baseline: false); }
-  &.baseline { .smallTextResponsive($baseline: true); }
+  &:not(.baseline) { @include smallTextResponsive($baseline: false); }
+  &.baseline { @include smallTextResponsive($baseline: true); }
 }
 
 .substandard {
-  &:not(.baseline) { .substandardTextResponsive($baseline: false); }
-  &.baseline { .substandardTextResponsive($baseline: true); }
+  &:not(.baseline) { @include substandardTextResponsive($baseline: false); }
+  &.baseline { @include substandardTextResponsive($baseline: true); }
 }
 
 .superstandard {
-  &:not(.baseline) { .superstandardTextResponsive($baseline: false); }
-  &.baseline { .superstandardTextResponsive($baseline: true); }
+  &:not(.baseline) { @include superstandardTextResponsive($baseline: false); }
+  &.baseline { @include superstandardTextResponsive($baseline: true); }
 }
 
 .subheading {
-  &:not(.baseline) { .subheadingTextResponsive($baseline: false); }
-  &.baseline { .subheadingTextResponsive($baseline: true); }
+  &:not(.baseline) { @include subheadingTextResponsive($baseline: false); }
+  &.baseline { @include subheadingTextResponsive($baseline: true); }
 }
 
 .headline {
-  &:not(.baseline) { .headlineTextResponsive($baseline: false); }
-  &.baseline { .headlineTextResponsive($baseline: true); }
+  &:not(.baseline) { @include headlineTextResponsive($baseline: false); }
+  &.baseline { @include headlineTextResponsive($baseline: true); }
 }
 
 .heading {
-  &:not(.baseline) { .headingTextResponsive($baseline: false); }
-  &.baseline { .headingTextResponsive($baseline: true); }
+  &:not(.baseline) { @include headingTextResponsive($baseline: false); }
+  &.baseline { @include headingTextResponsive($baseline: true); }
 }
 
 .hero {
-  &:not(.baseline) { .heroTextResponsive($baseline: false); }
-  &.baseline { .heroTextResponsive($baseline: true); }
+  &:not(.baseline) { @include heroTextResponsive($baseline: false); }
+  &.baseline { @include heroTextResponsive($baseline: true); }
 }
 
 .light {

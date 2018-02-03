@@ -1,4 +1,4 @@
-import styles from './MonthPicker.less';
+import styles from './MonthPicker.scss';
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';

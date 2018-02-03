@@ -1,4 +1,4 @@
-import styles from './Rating.less';
+import styles from './Rating.scss';
 
 import React from 'react';
 import PropTypes from 'prop-types';

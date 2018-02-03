@@ -1,4 +1,4 @@
-import styles from './Icon.less';
+import styles from './Icon.scss';
 
 import React from 'react';
 import PropTypes from 'prop-types';

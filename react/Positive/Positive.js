@@ -1,4 +1,4 @@
-import styles from './Positive.less';
+import styles from './Positive.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 

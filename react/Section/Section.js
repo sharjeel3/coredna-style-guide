@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import styles from './Section.less';
+import styles from './Section.scss';
 
 export default function Section({ children, className, header, ...restProps }) {
   return (

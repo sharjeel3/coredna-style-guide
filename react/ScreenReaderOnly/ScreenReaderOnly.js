@@ -1,4 +1,4 @@
-import styles from './ScreenReaderOnly.less';
+import styles from './ScreenReaderOnly.scss';
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';

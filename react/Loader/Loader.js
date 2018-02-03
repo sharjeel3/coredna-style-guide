@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Loader.less';
+import styles from './Loader.scss';
 import classnames from 'classnames';
 
 export default function Loader({ _small }) {

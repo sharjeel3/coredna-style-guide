@@ -1,4 +1,4 @@
-import styles from './AsidedLayout.less';
+import styles from './AsidedLayout.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';

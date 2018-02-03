@@ -1,4 +1,4 @@
-import styles from './Critical.less';
+import styles from './Critical.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 

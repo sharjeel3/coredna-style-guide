@@ -1,4 +1,4 @@
-import styles from './StyleGuideProvider.less';
+import styles from './StyleGuideProvider.scss';
 
 import React from 'react';
 import PropTypes from 'prop-types';

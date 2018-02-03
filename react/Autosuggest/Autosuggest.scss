@@ -1,4 +1,4 @@
-@import (reference) "~seek-style-guide/theme";
+@import "~seek-style-guide/theme";
 
 $suggestionContainerRowsOffset: 6;
 $suggestionFieldHeightInRows: 5;
@@ -29,9 +29,9 @@ $containerHeight: $touchableTextHeight + $sectionTitleHeight;
   overflow-y: auto;
   top: $grid-row-height * $suggestionContainerRowsOffset;
 
-  .smallDeviceOnly({
+  @media #{$mobile} {
     max-height: "calc(100vh - #{$containerHeight})";
-  });
+  };
 }
 
 .suggestionsContainerOpen {
@@ -41,7 +41,7 @@ $containerHeight: $touchableTextHeight + $sectionTitleHeight;
 .suggestionsContainer_withLabel {
   $labelRowOffset: 4;
   top: $grid-row-height * ($suggestionContainerRowsOffset + $labelRowOffset);
-  @media $desktop {
+  @media #{$desktop} {
     $labelRowOffset: 3;
     top: $grid-row-height * ($suggestionContainerRowsOffset + $labelRowOffset);
   }
@@ -84,9 +84,9 @@ $containerHeight: $touchableTextHeight + $sectionTitleHeight;
   visibility: visible;
 
   &.backdrop_isMobile {
-    .smallDeviceOnly({
+    @media #{$mobile} {
       @include backdrop();
-    });
+    };
   }
 }
 

@@ -1,4 +1,4 @@
-import styles from './StarIcon.less';
+import styles from './StarIcon.scss';
 
 import svgMarkup from './StarIcon.svg';
 import svgMarkupFilled from './StarIconFilled.svg';

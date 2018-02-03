@@ -1,4 +1,4 @@
-@import (reference) "~seek-style-guide/theme";
+@import "~seek-style-guide/theme";
 
 .print {
   @media print {
@@ -13,13 +13,13 @@
 }
 
 .mobile {
-  @media $mobile {
+  @media #{$mobile} {
     display: none !important;
   }
 }
 
 .desktop {
-  @media $desktop {
+  @media #{$desktop} {
     display: none !important;
   }
 }

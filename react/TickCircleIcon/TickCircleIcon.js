@@ -1,4 +1,4 @@
-import styles from './TickCircleIcon.less';
+import styles from './TickCircleIcon.scss';
 
 import svgMarkup from './TickCircleIcon.svg';
 import svgMarkupFilled from './TickCircleIconFilled.svg';

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import classNames from 'classnames';
 
-import styles from './Hidden.less';
+import styles from './Hidden.scss';
 
 const Hidden = ({ children, component, className, print, screen, mobile, desktop, ...restprops }) => {
   const props = {

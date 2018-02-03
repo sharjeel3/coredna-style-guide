@@ -1,4 +1,4 @@
-import styles from './ScreenReaderSkipTarget.less';
+import styles from './ScreenReaderSkipTarget.scss';
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';

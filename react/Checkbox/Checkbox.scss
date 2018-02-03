@@ -1,4 +1,4 @@
-@import (reference) "~seek-style-guide/theme";
+@import "~seek-style-guide/theme";
 
 @mixin activeFocusReset() {
   .input:not([readonly]):not([disabled]):focus + .label &,
@@ -31,7 +31,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  @media $desktop {
+  @media #{$desktop} {
     @include touchableText($standard-type-scale);
   }
 }
@@ -72,7 +72,7 @@
   border: 1px solid $sk-mid-gray-light;
   border-radius: 2px;
   cursor: pointer;
-  @media $desktop {
+  @media #{$desktop} {
     @include touchableText($standard-type-scale);
   }
 

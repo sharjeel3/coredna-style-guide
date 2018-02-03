@@ -1,4 +1,4 @@
-import styles from './TextLink.less';
+import styles from './TextLink.scss';
 
 import React from 'react';
 import PropTypes from 'prop-types';

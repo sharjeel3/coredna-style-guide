@@ -1,5 +1,5 @@
 import svgMarkup from './ChevronIcon.svg';
-import styles from './ChevronIcon.less';
+import styles from './ChevronIcon.scss';
 
 import React from 'react';
 import PropTypes from 'prop-types';

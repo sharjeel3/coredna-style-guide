@@ -1,4 +1,4 @@
-import styles from './FieldLabel.less';
+import styles from './FieldLabel.scss';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 

@@ -1,4 +1,4 @@
-import styles from './LogoRainbow.less';
+import styles from './LogoRainbow.scss';
 import LogoRainbowText from './LogoRainbowText';
 import LogoRainbowIcon from './LogoRainbowIcon';
 import Logo from '../Logo/Logo';

@@ -1,8 +1,8 @@
-@import (reference) "~seek-style-guide/theme";
+@import "~seek-style-guide/theme";
 
 .root {
   margin-bottom: ($grid-row-height * 3);
-  @media $mobile {
+  @media #{$mobile} {
     margin-bottom: ($grid-row-height * 4);
   }
   &.noMarginBottom {

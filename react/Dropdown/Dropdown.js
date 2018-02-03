@@ -1,4 +1,4 @@
-import styles from './Dropdown.less';
+import styles from './Dropdown.scss';
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';

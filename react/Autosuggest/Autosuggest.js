@@ -1,4 +1,4 @@
-import styles from './Autosuggest.less';
+import styles from './Autosuggest.scss';
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';

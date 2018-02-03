@@ -1,4 +1,4 @@
-import styles from './Secondary.less';
+import styles from './Secondary.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 
