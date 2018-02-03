@@ -68,7 +68,7 @@ $touchableTextHeight: $grid-row-height * $interaction-type-row-span;
 }
 
 @mixin rawText($font-scale: $standard-type-scale) {
-  font-size: unitless(($font-scale * $base-font-size), px);
+  font-size: $font-scale * $base-font-size + px;
 }
 
 // Private type mixins
