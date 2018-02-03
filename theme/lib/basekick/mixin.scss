@@ -1,6 +1,6 @@
 @mixin basekick($bk-type-size-modifier, $bk-type-row-span, $bk-descender-height-scale, $sk-base-font-size, $bk-grid-row-height, $bk-line-height-override: false) {
   $font-size: ($bk-type-size-modifier * $sk-base-font-size);
-  font-size: unit($font-size, px);
+  font-size: $font-size + px;
 
   @function is-not-number($value) {
     @return type-of($value) != 'number';
@@ -9,17 +9,17 @@
   @mixin calculate-type-offset($line-height) {
     $line-height-scale: ($line-height / $font-size);
     $offset: (($line-height-scale - 1) / 2) + $bk-descender-height-scale;
-    transform: translateY(unit($offset, em));
+    transform: translateY($offset + em);
   }
 
   @if (is-not-number($bk-line-height-override)) {
     $line-height: ($bk-type-row-span * $bk-grid-row-height);
-    line-height: unit($line-height, px);
+    line-height: $line-height + px;
     @include calculate-type-offset($line-height);
   }
 
   @if (is-not-number($bk-line-height-override)) {
-    line-height: unit($bk-line-height-override, px);
+    line-height: $bk-line-height-override + px;
     @include calculate-type-offset($bk-line-height-override);
   }
 };

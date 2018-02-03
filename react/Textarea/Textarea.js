@@ -1,4 +1,4 @@
-import styles from './Textarea.less';
+import styles from './Textarea.scss';
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
