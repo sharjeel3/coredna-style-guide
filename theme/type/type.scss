@@ -75,4 +75,79 @@ $small-type-weight-mobile: $sk-regular;
 $interaction-type-scale: 1.8;
 $interaction-type-row-span: 5;
 
+$hero-type: (
+  scale: $hero-type-scale,
+  row-span: $hero-type-row-span,
+  weight: $hero-type-weight,
+  scale-mobile: $hero-type-scale-mobile,
+  row-span-mobile: $hero-type-row-span-mobile,
+  weight-mobile: $hero-type-weight-mobile
+);
 
+$headline-type: (
+  scale: $headline-type-scale,
+  row-span: $headline-type-row-span,
+  weight: $headline-type-weight,
+  scale-mobile: $headline-type-scale-mobile,
+  row-span-mobile: $headline-type-row-span-mobile,
+  weight-mobile: $headline-type-weight-mobile
+);
+
+$heading-type: (
+  scale: $heading-type-scale,
+  row-span: $heading-type-row-span,
+  weight: $heading-type-weight,
+  scale-mobile: $heading-type-scale-mobile,
+  row-span-mobile: $heading-type-row-span-mobile,
+  weight-mobile: $heading-type-weight-mobile
+);
+
+$subheading-type: (
+  scale: $subheading-type-scale,
+  row-span: $subheading-type-row-span,
+  weight: $subheading-type-weight,
+  scale-mobile: $subheading-type-scale-mobile,
+  row-span-mobile: $subheading-type-row-span-mobile,
+  weight-mobile: $subheading-type-weight-mobile
+);
+
+$superstandard-type: (
+  scale: $superstandard-type-scale,
+  row-span: $superstandard-type-row-span,
+  weight: $superstandard-type-weight,
+  scale-mobile: $superstandard-type-scale-mobile,
+  row-span-mobile: $superstandard-type-row-span-mobile,
+  weight-mobile: $superstandard-type-weight-mobile
+);
+
+$standard-type: (
+  scale: $standard-type-scale,
+  row-span: $standard-type-row-span,
+  weight: $standard-type-weight,
+  scale-mobile: $standard-type-scale-mobile,
+  row-span-mobile: $standard-type-row-span-mobile,
+  weight-mobile: $standard-type-weight-mobile
+);
+
+$substandard-type: (
+  scale: $substandard-type-scale,
+  row-span: $substandard-type-row-span,
+  weight: $substandard-type-weight,
+  scale-mobile: $substandard-type-scale-mobile,
+  row-span-mobile: $substandard-type-row-span-mobile,
+  weight-mobile: $substandard-type-weight-mobile
+);
+
+$small-type: (
+  scale: $small-type-scale,
+  row-span: $small-type-row-span,
+  weight: $small-type-weight,
+  scale-mobile: $small-type-scale-mobile,
+  row-span-mobile: $small-type-row-span-mobile,
+  weight-mobile: $small-type-weight-mobile
+);
+
+$interaction-type: (
+  scale: $interaction-type-scale,
+  row-span: $interaction-type-row-span
+);

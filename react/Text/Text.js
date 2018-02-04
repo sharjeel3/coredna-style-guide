@@ -1,14 +1,14 @@
-import styles from './Text.less';
+import styles from './Text.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 
 import classnames from 'classnames';
 
-import stylesPositive from '../Positive/Positive.less';
-import stylesCritical from '../Critical/Critical.less';
-import stylesSecondary from '../Secondary/Secondary.less';
-import stylesStrong from '../Strong/Strong.less';
-import stylesRegular from '../Regular/Regular.less';
+import stylesPositive from '../Positive/Positive.scss';
+import stylesCritical from '../Critical/Critical.scss';
+import stylesSecondary from '../Secondary/Secondary.scss';
+import stylesStrong from '../Strong/Strong.scss';
+import stylesRegular from '../Regular/Regular.scss';
 
 export default function Text({
   children,
