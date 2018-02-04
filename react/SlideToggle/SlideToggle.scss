@@ -20,7 +20,7 @@
   margin: 0;
 
   &:focus ~ .slider {
-    box-shadow: 0 0 10px 0 $sk-focus;
+    box-shadow: 0 0 10px 0 $dna-focus;
   }
 
   &:active ~ .slider .slideButton::before {
@@ -31,7 +31,7 @@
     left: 21px;
 
     &::before {
-      background-color: $sk-highlight;
+      background-color: $dna-highlight;
     }
   }
 
@@ -40,7 +40,7 @@
   }
 
   &:checked ~ .label {
-    font-weight: $sk-bold;
+    font-weight: $dna-bold;
   }
 }
 
@@ -72,7 +72,7 @@
   width: 48px;
   height: $grid-row-height * 3;
   border-radius: $grid-row-height * 1.5;
-  background-color: $sk-mid-gray-light;
+  background-color: $dna-mid-gray-light;
   transition: 0.3s;
 }
 
@@ -88,7 +88,7 @@
     height: $grid-row-height * 3;
     width: $grid-row-height * 3;
     border-radius: 50%;
-    background-color: $sk-mid-gray;
+    background-color: $dna-mid-gray;
     text-align: center;
   }
 }

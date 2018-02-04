@@ -16,7 +16,7 @@ $size: ($interaction-type-row-span * $grid-row-height);
   display: inline-block;
   height: $size;
   width: $size;
-  color: $sk-mid-gray-dark;
+  color: $dna-mid-gray-dark;
   opacity: 0.5;
   transition: opacity 0.3s ease;
   &:hover {

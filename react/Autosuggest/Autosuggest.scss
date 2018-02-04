@@ -19,7 +19,7 @@ $containerHeight: $touchableTextHeight + $sectionTitleHeight;
 .suggestionsContainer {
   display: none;
   position: absolute;
-  background-color: $sk-white;
+  background-color: $dna-white;
   box-shadow: 0 9px 30px rgba(0, 0, 0, 0.4);
   padding: $grid-row-height 0;
   border-radius: 2px;
@@ -52,8 +52,8 @@ $containerHeight: $touchableTextHeight + $sectionTitleHeight;
   line-height: $sectionTitleHeight;
   height: $sectionTitleHeight;
   margin: $grid-row-height ($grid-gutter-width * 0.75) 0;
-  color: darken($sk-highlight, 10%);
-  font-weight: $sk-bold;
+  color: darken($dna-highlight, 10%);
+  font-weight: $dna-bold;
 
   .sectionContainer:first-child & {
     margin-top: 0;
@@ -72,7 +72,7 @@ $containerHeight: $touchableTextHeight + $sectionTitleHeight;
 }
 
 .suggestionHighlighted {
-  background-color: $sk-mid-gray-light;
+  background-color: $dna-mid-gray-light;
 }
 
 .autosuggestBackdrop {

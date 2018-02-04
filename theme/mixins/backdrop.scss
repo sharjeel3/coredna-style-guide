@@ -11,6 +11,6 @@
 
 @mixin backdrop() {
   @include transparentBackdrop();
-  background-color: $sk-black;
+  background-color: $dna-black;
   opacity: 0.7;
 }

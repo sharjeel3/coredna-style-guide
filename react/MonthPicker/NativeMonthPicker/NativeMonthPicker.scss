@@ -10,11 +10,11 @@
   width: 100%;
   height: $grid-row-height * 5;
   padding: 0 $field-gutter-width;
-  background: $sk-white;
-  border: $field-border-width solid $sk-mid-gray-light;
+  background: $dna-white;
+  border: $field-border-width solid $dna-mid-gray-light;
   border-radius: $field-border-radius;
-  color: $sk-charcoal;
-  background-color: $sk-white;
+  color: $dna-charcoal;
+  background-color: $dna-white;
   appearance: none;
 
   &::-webkit-inner-spin-button,
@@ -26,7 +26,7 @@
 
   .invalid & {
     border-color: transparent;
-    box-shadow: 0 0 0 $field-border-width $sk-pink;
+    box-shadow: 0 0 0 $field-border-width $dna-pink;
   }
 
   &:not([readonly]):not([disabled]):focus {
@@ -44,7 +44,7 @@
   border: 0;
   padding: 0 $field-gutter-width;
   background-color: transparent;
-  color: $sk-mid-gray;
+  color: $dna-mid-gray;
   display: flex;
   align-items: center;
   pointer-events: none;

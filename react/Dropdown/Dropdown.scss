@@ -13,11 +13,11 @@ $chevronWidth: 16px + ($field-gutter-width * 2);
   display: block;
   height: $grid-row-height * 5;
   padding: 0 $chevronWidth 0 $field-gutter-width;
-  background: $sk-white;
-  border: $field-border-width solid $sk-mid-gray-light;
+  background: $dna-white;
+  border: $field-border-width solid $dna-mid-gray-light;
   border-radius: $field-border-radius;
-  color: $sk-charcoal;
-  background-color: $sk-white;
+  color: $dna-charcoal;
+  background-color: $dna-white;
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -35,22 +35,22 @@ $chevronWidth: 16px + ($field-gutter-width * 2);
 
   .invalid & {
     border-color: transparent;
-    box-shadow: 0 0 0 $field-border-width $sk-pink;
+    box-shadow: 0 0 0 $field-border-width $dna-pink;
 
     &:not([readonly]):not([disabled]):focus,
     .rootFocus & {
       border-color: transparent;
-      box-shadow: 0 0 0 $field-border-width $sk-pink;
+      box-shadow: 0 0 0 $field-border-width $dna-pink;
     }
   }
 
   &.placeholderSelected {
-    color: $sk-mid-gray;
+    color: $dna-mid-gray;
   }
 }
 
 .option {
-  color: $sk-charcoal;
+  color: $dna-charcoal;
 }
 
 .chevron {
@@ -64,7 +64,7 @@ $chevronWidth: 16px + ($field-gutter-width * 2);
   display: flex;
   align-items: center;
   pointer-events: none;
-  color: $sk-black;
+  color: $dna-black;
 }
 
 .chevronSvg {

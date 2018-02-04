@@ -16,7 +16,7 @@
     &::after {
       content: 'ERROR: Multiple <Text> components nested';
       background: red;
-      font-weight: $sk-bold;
+      font-weight: $dna-bold;
       color: white;
       position: absolute;
       top: 0;
@@ -62,7 +62,7 @@
 }
 
 .light {
-  font-weight: $sk-light;
+  font-weight: $dna-light;
 }
 
 .raw {

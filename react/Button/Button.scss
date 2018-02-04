@@ -43,13 +43,13 @@
 
 .root {
   @include touchableText();
-  font-weight: $sk-medium;
+  font-weight: $dna-medium;
   display: inline-block;
   text-decoration: none;
   user-select: none;
   text-align: center;
   padding: 0 $grid-gutter-width;
-  box-shadow: 0 1px fade($sk-black, 70%);
+  box-shadow: 0 1px fade($dna-black, 70%);
   border: 0;
   border-radius: 2px;
   transition:
@@ -69,20 +69,20 @@
 }
 
 .root_isPink {
-  @include buttonColor($sk-white, $sk-pink);
+  @include buttonColor($dna-white, $dna-pink);
 }
 
 .root_isBlue {
-  @include buttonColor($sk-white, $sk-highlight);
+  @include buttonColor($dna-white, $dna-highlight);
 }
 
 .root_isGray {
-  @include buttonColor($sk-black, $sk-mid-gray-light);
+  @include buttonColor($dna-black, $dna-mid-gray-light);
 }
 
 .root_isGhost,
 .root_isTransparent {
-  font-weight: $sk-regular;
+  font-weight: $dna-regular;
   background-color: transparent;
   box-shadow: none;
 }
@@ -90,17 +90,17 @@
 .root_isGhost {
   $border-width: 2px;
   border: $border-width solid;
-  font-weight: $sk-bold;
+  font-weight: $dna-bold;
   line-height: $touchableTextHeight - ($border-width * 2);
 }
 
 .root_isBlue.root_isGhost {
-  @include ghostColor($sk-link);
+  @include ghostColor($dna-link);
 }
 
 .root_isWhite.root_isGhost {
-  border-color: $sk-white;
-  color: $sk-white;
+  border-color: $dna-white;
+  color: $dna-white;
   @include buttonState('active', 'background-color', 'rgba(255, 255, 255, 0.2)');
   @include buttonState('hover', 'background-color', 'rgba(255, 255, 255, 0.2)');
   @include buttonState('focus', 'background-color', 'rgba(255, 255, 255, 0.2)');
@@ -108,7 +108,7 @@
 }
 
 .root_isTransparent {
-  color: $sk-link;
+  color: $dna-link;
   padding-left: 0;
   padding-right: 0;
   @include buttonState('hover', 'text-decoration', 'underline');

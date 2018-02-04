@@ -2,7 +2,7 @@
 
 .header {
   background: #3f51b5;
-  color: $sk-white;
+  color: $dna-white;
 }
 
 .photo {
@@ -19,7 +19,7 @@
 }
 
 .cardHeader {
-  background: $sk-gray-lightest;
+  background: $dna-gray-lightest;
   text-align: right;
   padding-top: 0;
   padding-bottom: 0;
@@ -30,7 +30,7 @@
 
 .marketing {
   @media #{$desktop} {
-    border: 1px solid $sk-gray-medium;
+    border: 1px solid $dna-gray-medium;
   }
 }
 
@@ -46,8 +46,8 @@
 
 .activityMobileCustom {
   @media only screen and (max-width: 740px) {
-    border-top: 1px solid $sk-gray-medium;
-    border-bottom: 1px solid $sk-gray-medium;
+    border-top: 1px solid $dna-gray-medium;
+    border-bottom: 1px solid $dna-gray-medium;
     margin: 0 -$grid-gutter-width;
     padding: 0 $grid-gutter-width;
 
@@ -65,5 +65,5 @@
 }
 
 .borderBottom {
-  box-shadow: inset 0 -1px 0 0 $sk-gray-medium;
+  box-shadow: inset 0 -1px 0 0 $dna-gray-medium;
 }

@@ -1,5 +1,5 @@
 @mixin link() {
-  color: $sk-link;
+  color: $dna-link;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
@@ -8,10 +8,10 @@
 }
 
 @mixin nav_link() {
-  color: $sk-black;
+  color: $dna-black;
   text-decoration: none;
   &:hover {
-    color: $sk-pink-on-gray-light;
+    color: $dna-pink-on-gray-light;
     cursor: pointer;
   }
 }

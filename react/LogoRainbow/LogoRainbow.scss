@@ -7,22 +7,22 @@
 }
 
 .root {
-  background-color: $sk-white;
+  background-color: $dna-white;
   @media #{$mobile} {
-    background-color: $sk-blue;
+    background-color: $dna-blue;
   }
 }
 
 .invert {
-  background-color: $sk-blue;
+  background-color: $dna-blue;
 }
 
 .logoText {
-  fill: $sk-black;
-  @include _mobileFill($sk-white);
+  fill: $dna-black;
+  @include _mobileFill($dna-white);
 }
 
 .invertedLogoText {
-  fill: $sk-white;
+  fill: $dna-white;
 }
 

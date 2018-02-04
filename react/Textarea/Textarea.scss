@@ -12,12 +12,12 @@
   resize: vertical;
   max-height: $grid-row-height * 20;
   line-height: 25px; // Deliberate deviation to avoid looking like body copy
-  color: $sk-charcoal;
-  border: $field-border-width solid $sk-mid-gray-light;
+  color: $dna-charcoal;
+  border: $field-border-width solid $dna-mid-gray-light;
   border-radius: $field-border-radius;
   padding: 12px $field-gutter-width;
   vertical-align: top;
-  background-color: $sk-white;
+  background-color: $dna-white;
   -webkit-appearance: none;
   -moz-appearance: none;
 
@@ -30,12 +30,12 @@
 
   .invalid & {
     border-color: transparent;
-    box-shadow: 0 0 0 $field-border-width $sk-pink;
+    box-shadow: 0 0 0 $field-border-width $dna-pink;
 
     &:not([readonly]):not([disabled]):focus,
     .rootFocus & {
       border-color: transparent;
-      box-shadow: 0 0 0 $field-border-width $sk-pink;
+      box-shadow: 0 0 0 $field-border-width $dna-pink;
     }
   }
 }
@@ -50,7 +50,7 @@
 
 .characterCount {
   @include standardText();
-  color: $sk-mid-gray-dark;
+  color: $dna-mid-gray-dark;
   text-align: right;
   margin-left: ($grid-gutter-width / 2);
 
@@ -60,5 +60,5 @@
 }
 
 .invalidCharacterCount {
-  color: $sk-pink;
+  color: $dna-pink;
 }
