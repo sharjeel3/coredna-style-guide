@@ -6,7 +6,7 @@ const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const autoprefixerConfig = require('../config/autoprefixer.config');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const decorateClientConfig = require('seek-style-guide-webpack').decorateClientConfig;
+const decorateClientConfig = require('../coredna-style-guide-webpack').decorateClientConfig;
 const babelConfig = require('../config/babel.config.js')({ reactHotLoader: false });
 
 const appCss = new ExtractTextPlugin('app.css');

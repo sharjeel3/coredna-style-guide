@@ -6,7 +6,7 @@ const fs = require('fs');
 const ejs = require('ejs');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
-const decorateServerConfig = require('seek-style-guide-webpack').decorateServerConfig;
+const decorateServerConfig = require('../coredna-style-guide-webpack').decorateServerConfig;
 const babelConfig = require('../config/babel.config.js')({ reactHotLoader: false });
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
