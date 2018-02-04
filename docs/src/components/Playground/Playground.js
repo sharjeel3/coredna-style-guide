@@ -18,17 +18,15 @@ import {
   Positive,
   Critical,
   Secondary,
-  Strong,
-  Header,
-  Footer
+  Strong
 } from 'seek-style-guide/react';
 
-import { makeDummyLinkRendererForPath } from 'seek-style-guide/react/Header/Header.demo';
+
 import TextLink from './Atoms/TextLink/TextLink';
 import IconButton from './Atoms/IconButton/IconButton';
 import Tab from './Atoms/Tab/Tab';
 
-const dummyLinkRenderer = makeDummyLinkRendererForPath('/playground');
+
 
 const renderAsideProfile = () => (
   <Card transparent>
@@ -133,7 +131,7 @@ export default class Playground extends Component {
   render() {
     return (
       <div>
-        <Header linkRenderer={dummyLinkRenderer} />
+
 
         <PageBlock>
           <Section header>
@@ -468,7 +466,7 @@ export default class Playground extends Component {
           </CardGroup>
         </PageBlock>
 
-        <Footer linkRenderer={dummyLinkRenderer} />
+
       </div>
     );
   }
