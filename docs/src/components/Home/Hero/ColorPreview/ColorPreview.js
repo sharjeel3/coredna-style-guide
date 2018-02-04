@@ -1,11 +1,21 @@
-import styles from './ColorPreview.less';
+import styles from './ColorPreview.scss';
 
 import React from 'react';
-import lessToJs from 'less-vars-to-js';
 
 import Droplet from './Droplet/Droplet';
-import brand from '!!raw-loader!seek-style-guide/theme/palette/brand.less';
-const brandValues = lessToJs(brand);
+import brand from '!!raw-loader!seek-style-guide/theme/palette/brand.scss';
+
+const sassToJs = function (sheet) {
+    let lessVars = {};
+    let matches = sheet.match(/\$(.*:[^;]*)/g) || [];
+    matches.forEach(function (variable) {
+        let definition = variable.split(/:\s*/);
+        lessVars[definition[0].replace(/['"]+/g, '').trim()] = definition.splice(1).join(':');
+    });
+    return lessVars;
+};
+
+const brandValues = sassToJs(brand);
 
 const getSwatch = name => {
   const value = brandValues[name];

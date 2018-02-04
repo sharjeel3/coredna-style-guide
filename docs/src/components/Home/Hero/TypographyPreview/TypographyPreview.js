@@ -1,4 +1,4 @@
-import styles from './TypographyPreview.less';
+import styles from './TypographyPreview.scss';
 
 import React from 'react';
 

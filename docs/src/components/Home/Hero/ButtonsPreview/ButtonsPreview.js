@@ -1,5 +1,5 @@
-import styles from './ButtonsPreview.less';
-import buttonStyles from 'seek-style-guide/react/Button/Button.less';
+import styles from './ButtonsPreview.scss';
+import buttonStyles from 'seek-style-guide/react/Button/Button.scss';
 
 import React from 'react';
 import classnames from 'classnames';

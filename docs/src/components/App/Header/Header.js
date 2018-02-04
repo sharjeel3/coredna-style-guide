@@ -1,4 +1,4 @@
-import styles from './Header.less';
+import styles from './Header.scss';
 
 import React, { Component } from 'react';
 import classnames from 'classnames';

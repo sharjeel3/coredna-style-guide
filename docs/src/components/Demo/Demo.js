@@ -1,4 +1,4 @@
-import styles from './Demo.less';
+import styles from './Demo.scss';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';

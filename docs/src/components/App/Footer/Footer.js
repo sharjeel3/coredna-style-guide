@@ -1,4 +1,4 @@
-import styles from './Footer.less';
+import styles from './Footer.scss';
 import React from 'react';
 import { PageBlock, Section } from 'seek-style-guide/react';
 import GithubIcon from './GithubIcon/GithubIcon';

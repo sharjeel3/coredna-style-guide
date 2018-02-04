@@ -1,4 +1,4 @@
-import styles from './IconPreview.less';
+import styles from './IconPreview.scss';
 
 import React from 'react';
 import {

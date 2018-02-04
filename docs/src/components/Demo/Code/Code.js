@@ -1,4 +1,4 @@
-import styles from './Code.less';
+import styles from './Code.scss';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 

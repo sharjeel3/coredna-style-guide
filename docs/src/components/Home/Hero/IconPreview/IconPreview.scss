@@ -1,4 +1,4 @@
-@import (reference) "~seek-style-guide/theme";
+@import "~seek-style-guide/theme";
 
 $iconSize: ($grid-row-height * 4);
 
@@ -8,7 +8,7 @@ $iconSize: ($grid-row-height * 4);
   justify-content: space-between;
   width: 100%;
   display: none;
-  @media $desktop {
+  @media #{$desktop} {
     display: flex;
   }
 }

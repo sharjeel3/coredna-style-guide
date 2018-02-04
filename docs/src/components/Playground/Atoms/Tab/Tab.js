@@ -1,4 +1,4 @@
-import styles from './Tab.less';
+import styles from './Tab.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 

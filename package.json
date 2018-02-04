@@ -125,6 +125,7 @@
     "react-shallow-testutils": "^3.0.0",
     "react-test-renderer": "^16.0.0",
     "sass-loader": "^6.0.6",
+    "sass-to-js-var-loader": "0.0.2",
     "seek-style-guide-webpack": "^2.1.1",
     "semantic-release": "^8.1.2",
     "serialize-javascript": "^1.4.0",

@@ -1,4 +1,4 @@
-@import (reference) "~seek-style-guide/theme";
+@import "~seek-style-guide/theme";
 
 .text {
   margin-bottom: $grid-row-height;
@@ -19,10 +19,10 @@
 }
 
 .color {
-  @media $mobile {
+  @media #{$mobile} {
     width: 100%;
   }
-  @media $desktop {
+  @media #{$desktop} {
     padding-right: $grid-gutter-width;
     width: 25%;
   }

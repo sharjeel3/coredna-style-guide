@@ -1,4 +1,4 @@
-@import (reference) "~seek-style-guide/theme";
+@import "~seek-style-guide/theme";
 
 .headerBlock {
   background: $dna-blue;
@@ -27,53 +27,53 @@
 }
 
 .title {
-  @mixin headingText(),
+  @include headingText();
 
-  text-transform: lowercase,
-  position: absolute,
-  color: $sk-white,
-  text-decoration: none,
-  top: -4px,
-  left: 97px,
-  width: 150px,
+  text-transform: lowercase;
+  position: absolute;
+  color: $sk-white;
+  text-decoration: none;
+  top: -4px;
+  left: 97px;
+  width: 150px;
 }
 
 .sectionContent {
-  position: relative,
+  position: relative;
 }
 
 .hamburger {
-  position: absolute,
-  right: 0,
-  top: 4px,
+  position: absolute;
+  right: 0;
+  top: 4px;
 }
 
 .hamburgerText {
-  overflow: hidden,
-  width: 0,
-  height: 0,
-  text-indent: 999px,
-  position: absolute,
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  text-indent: 999px;
+  position: absolute;
 }
 
 .checkbox {
-  position: absolute,
-  width: 0,
-  height: 0,
-  opacity: 0,
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
 }
 
 .bars {
-  display: block,
-  cursor: pointer,
-  width: $grid-gutter-width * 2,
-  height: ($grid-row-height * 3) + 1,
-  position: relative,
-  transform-origin: 100% 50%,
-  transform: scale(0.7),
+  display: block;
+  cursor: pointer;
+  width: $grid-gutter-width * 2;
+  height: ($grid-row-height * 3) + 1;
+  position: relative;
+  transform-origin: 100% 50%;
+  transform: scale(0.7);
 }
 
-$barHeight: 6px,
+$barHeight: 6px;
 @mixin bar() {
   height: $barHeight;
   width: 100%;

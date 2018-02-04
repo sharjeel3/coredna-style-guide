@@ -1,4 +1,4 @@
-@import (reference) "~seek-style-guide/theme";
+@import "~seek-style-guide/theme";
 
 .root {
   position: relative;
@@ -7,8 +7,8 @@
   color: $sk-black;
 }
 
-.heroItem { .heroText(); }
-.headlineItem { .headlineText(); }
+.heroItem { @include heroText(); }
+.headlineItem { @include headlineText(); }
 
 .bold {
   font-weight: $sk-bold;

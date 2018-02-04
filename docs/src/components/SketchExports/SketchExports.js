@@ -8,7 +8,7 @@ import {
   Section,
   Text
 } from 'seek-style-guide/react';
-import styles from './SketchExports.less';
+import styles from './SketchExports.scss';
 
 import colorsExports from '../../../../theme/**/*.sketch.js';
 const colors = assign({}, ...colorsExports.map(x => x.colors || {}));

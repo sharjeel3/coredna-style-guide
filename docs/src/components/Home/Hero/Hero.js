@@ -1,4 +1,4 @@
-import styles from './Hero.less';
+import styles from './Hero.scss';
 import React from 'react';
 import { PageBlock, Section } from 'seek-style-guide/react';
 import ColorPreview from './ColorPreview/ColorPreview';

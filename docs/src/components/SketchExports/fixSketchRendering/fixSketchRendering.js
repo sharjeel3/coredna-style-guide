@@ -1,4 +1,4 @@
-import styles from './fixSketchRendering.less';
+import styles from './fixSketchRendering.scss';
 
 export default rootEl => {
   // Require canvg dynamically because it can't run in a Node context

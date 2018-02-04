@@ -1,11 +1,11 @@
-@import (reference) "~seek-style-guide/theme";
+@import "~seek-style-guide/theme";
 
 .root {
   border: none;
   background: none;
-  @mixin touchableText($standard-type-scale),
-  color: $sk-link,
-  padding: 0,
+  @include touchableText($standard-type-scale);
+  color: $sk-link;
+  padding: 0;
 
   :global(svg) {
     position: relative;

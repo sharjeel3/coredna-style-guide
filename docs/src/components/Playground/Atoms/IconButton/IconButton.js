@@ -1,4 +1,4 @@
-import styles from './IconButton.less';
+import styles from './IconButton.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 

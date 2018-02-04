@@ -1,4 +1,4 @@
-import styles from './Playground.less';
+import styles from './Playground.scss';
 
 import React, { Component } from 'react';
 
