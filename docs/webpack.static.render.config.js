@@ -69,6 +69,28 @@ const config = {
         ]
       },
       {
+          test: /\.scss$/,
+          include: appPaths,
+          use: [
+              {
+                  loader: 'css-loader/locals',
+                  options: {
+                      modules: true,
+                      localIdentName: '[name]__[local]___[hash:base64:5]'
+                  }
+              },
+              {
+                  loader: 'postcss-loader',
+                  options: {
+                      plugins: [autoprefixer]
+                  }
+              },
+              {
+                  loader: 'sass-loader'
+              }
+          ]
+      },
+      {
         test: /\.svg$/,
         include: appPaths,
         use: [
