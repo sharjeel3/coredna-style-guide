@@ -1,8 +1,8 @@
 [![Build Status](https://img.shields.io/travis/seek-oss/seek-style-guide/master.svg?style=flat-square)](http://travis-ci.org/seek-oss/seek-style-guide) [![npm](https://img.shields.io/npm/v/seek-style-guide.svg?style=flat-square)](https://www.npmjs.com/package/seek-style-guide) [![Greenkeeper](https://img.shields.io/badge/greenkeeper-enabled-brightgreen.svg?style=flat-square)](https://greenkeeper.io/) [![David](https://img.shields.io/david/seek-oss/seek-style-guide.svg?style=flat-square)](https://david-dm.org/seek-oss/seek-style-guide) [![David](https://img.shields.io/david/peer/seek-oss/seek-style-guide.svg?style=flat-square)](https://david-dm.org/seek-oss/seek-style-guide?type=peer) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 
-# seek-style-guide
+# coredna-style-guide
 
-Living style guide for [SEEK](https://github.com/seek-oss), powered by [React](https://facebook.github.io/react), [webpack](https://webpack.js.org), [CSS Modules](https://github.com/css-modules/css-modules) and [Less](http://lesscss.org/).
+Living style guide for [Coredna](https://github.com/coredna), powered by [React](https://facebook.github.io/react), [webpack](https://webpack.js.org), [CSS Modules](https://github.com/css-modules/css-modules) and [SCSS](https://sass-lang.com).
 
 If you're creating a new project from scratch, consider using [sku](https://github.com/seek-oss/sku), our officially supported front-end development toolkit. It's specially designed to get your project up and running as quickly as possible, while simplifying the process of keeping your development environment up to date.
 
@@ -54,26 +54,6 @@ export default class App extends Component {
 
 `StyleGuideProvider`'s props are used to set the page head properties using [Helmet](https://github.com/nfl/react-helmet).
 
-### Applying the Standard Header and Footer
-
-The standard header and footer are provided as React components:
-
-```js
-import { Header, Footer } from 'seek-style-guide/react';
-```
-
-The `<Header>` component accepts the following props:
-
-- **locale:** `'AU'` (default) or `'NZ'`
-- **authenticated:** `null/undefined` (default, authentication pending), `true` or `false`
-- **userName:** User's display name, when authenticated
-- **activeTab:** Text of the active tab, e.g. `'Job Search'`
-- **divider:** `true` (default, renders a blue divider below the navigation tabs) or `false`
-- **linkRenderer:** Function to allow custom rendering of links. The default implementation simply renders a standard link, spreading all props: `props => <a {...props} />`
-
-The `<Footer>` component accepts the following props:
-- **locale:** See above.
-- **linkRenderer:** See above.
 
 ## High Level Components
 
@@ -85,16 +65,16 @@ For more advanced pages, if you need to drop down into Less, the style guide pro
 
 In any style sheet that depends on the style guide, first import the Less theme by reference.
 
-```less
-@import (reference) "~seek-style-guide/theme";
+```scss
+@import "~seek-style-guide/theme";
 ```
 
 ### Responsive Breakpoint
 
 The style guide exposes one responsive breakpoint:
 
-```less
-@responsive-breakpoint: 740px;
+```scss
+$responsive-breakpoint: 740px;
 ```
 
 Content should otherwise be responsive within its container. The set of included components follow this model internally if you'd like to get a sense of what this looks like in practice.
@@ -105,70 +85,70 @@ As much as possible, colors should be directly imported from the style guide.
 
 The following colors are provided:
 
-```less
+```scss
 // Brand colors
-@sk-blue
-@sk-pink
-@sk-green
-@sk-purple
-@sk-teal
+$dna-blue
+$dna-pink
+$dna-green
+$dna-purple
+$dna-teal
 
 // Partner brand colors
-@sk-business
-@sk-volunteer
-@sk-learning-light
-@sk-learning-medium
-@sk-learning-dark
+$dna-business
+$dna-volunteer
+$dna-learning-light
+$dna-learning-medium
+$dna-learning-dark
 
 // Grays
-@sk-black
-@sk-charcoal
-@sk-mid-gray-dark
-@sk-mid-gray-medium
-@sk-mid-gray
-@sk-mid-gray-light
-@sk-gray-light
-@sk-gray-lightest
-@sk-off-white
-@sk-white
+$dna-black
+$dna-charcoal
+$dna-mid-gray-dark
+$dna-mid-gray-medium
+$dna-mid-gray
+$dna-mid-gray-light
+$dna-gray-light
+$dna-gray-lightest
+$dna-off-white
+$dna-white
 
 // Element colors
-@sk-link
-@sk-link-visited
-@sk-focus
-@sk-highlight
-@sk-green-light
-@sk-yellow
-@sk-yellow-light
-@sk-orange
-@sk-footer
-@sk-background
-@sk-yellow
+$dna-link
+$dna-link-visited
+$dna-focus
+$dna-highlight
+$dna-green-light
+$dna-yellow
+$dna-yellow-light
+$dna-orange
+$dna-footer
+$dna-background
+$dna-yellow
 ```
 
 ### Z-Indexes
 
 To ensure correct relative elements stacking order, z-index variables are provided:
 
-```less
-@z-index-header-overlay
-@z-index-header
-@z-index-page-overlay
-@z-index-inline-overlay
-@z-index-negative
+```scss
+$z-index-header-overlay
+$z-index-header
+$z-index-page-overlay
+$z-index-inline-overlay
+$z-index-negative
 ```
 
 ### Accessible Color Variants
 
 The contrast ratio of certain foreground/background color combinations don't meet the [AA accessibility standards](https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast) that we aim for. As a result, a suite of accessible variants have been provided:
 
-```less
-@sk-mid-gray-on-white
-@sk-pink-on-gray-light
-@sk-learning-dark-on-gray-light
-@sk-business-on-gray-light
-@sk-link-on-mid-gray-light
-@sk-mid-gray-dark-on-gray-light
+```scss
+$dna-mid-gray-on-white
+$dna-pink-on-gray-light
+$dna-learning-dark-on-gray-light
+$dna-business-on-gray-light
+$dna-link-on-mid-gray-light
+$dna-mid-gray-dark-on-gray-light
 ```
 
 Please note that this list is not exhaustive, so contributions are encouraged. To validate color combinations, we recommend the use of the web-based tool [Accessible Colors](http://accessible-colors.com) by [@moroshko](https://github.com/moroshko).
@@ -177,116 +157,51 @@ Please note that this list is not exhaustive, so contributions are encouraged. T
 
 In order to ensure elements correctly follow the grid, element sizing should always be controlled by the following variables:
 
-```less
-@grid-row-height
-@grid-gutter-width
-@grid-column-width
-@grid-container-width
+```scss
+$grid-row-height
+$grid-gutter-width
+$grid-column-width
+$grid-container-width
 ```
 
 When defining a document content container:
 
-```less
+```scss
 .element {
-  max-width: @grid-container-width;
+  max-width: $grid-container-width;
 }
 ```
 
 When defining heights and vertical padding/margins:
 
-```less
+```scss
 .element {
-  height: (@grid-row-height * 3);
-  padding-bottom: @grid-row-height;
-  margin-bottom: @grid-row-height;
+  height: ($grid-row-height * 3);
+  padding-bottom: $grid-row-height;
+  margin-bottom: $grid-row-height;
 }
 ```
 
 When defining widths and horizontal padding/margins:
 
-```less
+```scss
 .element {
-  width: (@grid-column-width * 3);
-  padding-right: @grid-gutter-width;
-  margin-right: @grid-column-width;
+  width: ($grid-column-width * 3);
+  padding-right: $grid-gutter-width;
+  margin-right: $grid-column-width;
 }
 ```
 
 It's important to note that any additions to these values (e.g. borders) will need to be negated to maintain rhythm:
 
-```less
+```scss
 .element {
-  @border-width: 1px;
-  border-bottom: @border-width solid @sk-charcoal;
-  padding-bottom: @grid-row-height - @border-width;
+  $border-width: 1px;
+  border-bottom: $border-width solid $dna-charcoal;
+  padding-bottom: $grid-row-height - $border-width;
 }
 ```
 
-## Standalone Header and Footer
-
-If you're maintaining or updating a non-React app, a standalone JS + CSS + HTML package is provided when [installing from npm](#installation). The bundled JavaScript is provided as a [UMD package](https://github.com/umdjs/umd), providing a global `SeekHeaderFooter` object as a fallback for older apps without a proper module system.
-
-First, include the following files in your app:
-- `seek-style-guide/dist/header-footer/styles.css`
-- `seek-style-guide/dist/header-footer/client.js`
-
-Then, include the appropriate header and footer HTML snippets, switching based on locale:
-
-**Header:**
-- `seek-style-guide/dist/header-footer/header__au.html`
-- `seek-style-guide/dist/header-footer/header__nz.html`
-
-**Header, with "Advice & Tips" tab selected:**
-- `seek-style-guide/dist/header-footer/header__au__advice_and_tips.html`
-- `seek-style-guide/dist/header-footer/header__nz__advice_and_tips.html`
-
-*Note: If you need a different tab selected, feel free to open a pull request or raise an issue*
-
-**Footer:**
-- `seek-style-guide/dist/header-footer/footer__au.html`
-- `seek-style-guide/dist/header-footer/footer__nz.html`
-
-When the document is ready, rehydrate the header by triggering a client-side render:
-
-```js
-var header = SeekHeaderFooter.renderHeader();
-
-// Update props later, if needed:
-header.updateProps({ ...newProps });
-```
-
-Finally, render the footer following a similar pattern:
-
-```js
-var footer = SeekHeaderFooter.renderFooter();
-
-// Again, update props later, if needed:
-footer.updateProps({ ...newProps });
-```
-
-If you'd prefer not to use the pre-rendered header and footer snippets and purely render client-side, you can manually pass the container element and initial props to the render methods yourself.
-
-First, add placeholder elements to the page:
-
-```html
-<div id="header"></div>
-<div id="footer"></div>
-```
-
-Then, trigger the initial render client-side:
-
-```js
-var header = SeekHeaderFooter.renderHeader(document.getElementById('header'), { ...props });
-var footer = SeekHeaderFooter.renderHeader(document.getElementById('footer'), { ...props });
-```
-
-For more detail on accepted props, read the React documentation for [applying the standard header and footer](#applying-the-standard-header-and-footer).
-
-If you need to create React elements (e.g. when providing a `linkRenderer` function), the standalone bundle also exports React's [createElement](https://facebook.github.io/react/docs/react-api.html#createelement) function so you don't need to install React separately to gain access to it:
-
-```js
-var link = SeekHeaderFooter.createElement('a', { href: '/jobs' }, 'Jobs');
-```
 
 ## Advanced Usage
 
